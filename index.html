@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aim Hesapla</title>
+
+<style>
+body {
+    font-family: Arial;
+    background: #0f172a;
+    color: white;
+    text-align: center;
+}
+.box {
+    background: #1e293b;
+    padding: 20px;
+    margin: 50px auto;
+    border-radius: 10px;
+    width: 300px;
+}
+input, button {
+    padding: 10px;
+    margin: 10px;
+    width: 80%;
+}
+button {
+    background: green;
+    color: white;
+    border: none;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🎯 Sens Converter</h1>
+
+<div class="box">
+<input type="number" id="valo" placeholder="Valorant sens">
+<button onclick="hesapla()">Çevir</button>
+<p id="sonuc"></p>
+</div>
+
+<script>
+function hesapla() {
+    let v = document.getElementById("valo").value;
+    let cs = v * 3.18;
+    document.getElementById("sonuc").innerText = "CS2 Sens: " + cs.toFixed(2);
+}
+</script>
+
+</body>
+</html>
